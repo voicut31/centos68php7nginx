@@ -28,7 +28,7 @@ RUN yum install -y memcached
 
 RUN yum install -y phpMyAdmin
 
-ADD etc/yum.repos.d/mongo-org-3.4.repo /etc/yum.repos.d/mongo-org-3.4.repo
+ADD etc/yum.repos.d/mongodb-org-3.4.repo /etc/yum.repos.d/mongodb-org-3.4.repo
 
 RUN yum install -y mongodb-org
 
