@@ -28,6 +28,10 @@ RUN yum install -y memcached
 
 RUN yum install -y phpMyAdmin
 
+ADD etc/yum.repos.d/mongo-org-3.4.repo /etc/yum.repos.d/mongo-org-3.4.repo
+
+RUN yum install -y mongodb-org
+
 ADD home/initservices.sh /home/initservices.sh
 
 EXPOSE 80 443

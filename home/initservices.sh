@@ -10,6 +10,16 @@ echo "Start mysql"
 
 service mysqld start
 
+echo "Start memcache"
 
+service memcached start
+
+echo "Start Sphinx Search"
+
+service searchd start
+
+echo "Start mongo"
+
+service mongod start
 
 
