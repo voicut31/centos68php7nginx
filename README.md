@@ -1,12 +1,9 @@
-Docker with nGinx, Php 7, MySQL 5.7, Sphinx Search, Memcached, MongoDB
+Docker with nGinx, Php 7, MySQL 5.7
 
 ## Last Version
 nginx: **1.10.2**   
 php:   **7.0**
 mysql:   **5.7**
-memcached:   **1.4.4**
-sphinxsearch: **2.1.5**
-mongodb:   **3.4**
 
 ## Docker Hub   
 **Nginx-PHP7:** [https://hub.docker.com/r/voicut31/centos68php7nginx/](https://hub.docker.com/r/voicut31/centos68php7nginx/)   
@@ -14,20 +11,20 @@ mongodb:   **3.4**
 ## Installation
 Pull the image from the docker index rather than downloading the git repo. This prevents you having to build the image on every docker host.
 ```sh
-docker pull voicut31/centos68php7nginx/
+docker pull voicut31/centos68php7nginx:lemp
 ```
 
 ## Running
 To simply run the container:
 ```sh
-docker run --name nginx -p 8080:80 -d voicut31/centos68php7nginx/
+docker run --name nginx -p 8080:80 -d voicut31/centos68php7nginx
 ```
 You can then browse to http://\<docker_host\>:8080 to view the default install files.
 
 ## Volumes
 If you want to link to your web site directory on the docker host to the container run:
 ```sh
-docker run --name nginx -p 8080:80 -v /your_code_directory:/data/www -d voicut31/centos68php7nginx/
+docker run --name nginx -p 8080:80 -v /your_code_directory:/data/www -d voicut31/centos68php7nginx
 ```
 
 ## Enabling SSL
