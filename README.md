@@ -42,32 +42,6 @@ docker run -d --name=nginx \
 voicut31/centos68php7nginx/
 ```
 
-## Enabling Extensions With *.so
-Add xxx.ini to folder ```/your_php_extension_ini``` and add xxx.so to folder ```/your_php_extension_file```, then run the command:   
-```sh
-docker run --name nginx \
--p 8080:80 -d \
--v /your_php_extension_ini:/usr/local/php/etc/php.d \
--v /your_php_extension_file:/data/phpext \
-voicut31/centos68php7nginx/
-```
-in xxx.ini, "zend_extension = /data/phpext/xxx.so", the zend_extension must be use ```/data/phpext/```.   
-
-## Enabling Extensions With Source
-Also, You can add the source to ```extension.sh```. Example:   
-```
-#Add extension mongodb
-curl -Lk https://pecl.php.net/get/mongodb-1.1.8.tgz | gunzip | tar x -C /home/extension && \
-cd /home/extension/mongodb-1.1.8 && \
-/usr/local/php/bin/phpize && \
-./configure --with-php-config=/usr/local/php/bin/php-config && \
-make && make install
-```
-Add ```mongodb.ini``` to folder ```extini```:   
-```
-extension=mongodb.so
-```
-
 ## Author
 Author: Voicu Tibea    
 Email:  voicut31@yahoo.com       
