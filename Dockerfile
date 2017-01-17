@@ -36,7 +36,5 @@ ADD home/initservices.sh /home/initservices.sh
 
 EXPOSE 80 443
 
-ENTRYPOINT ["/home/initservices.sh"]
-
 CMD ["/home/initservices.sh"]
 
