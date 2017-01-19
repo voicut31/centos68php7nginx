@@ -1,0 +1,22 @@
+server {
+        server_name phpmyadmin.asf.docker;
+        location /phpMyAdmin {
+               root /usr/share/;
+               index index.php index.html index.htm;
+               location ~ ^/phpMyAdmin/(.+\.php)$ {
+                       try_files $uri =404;
+                       root /usr/share/;
+                       fastcgi_pass 127.0.0.1:9000;
+                       fastcgi_index index.php;
+                       fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+                       include fastcgi_params;
+               }
+               location ~* ^/phpMyAdmin/(.+\.(jpg|jpeg|gif|css|png|js|ico|html|xml|txt))$ {
+                       root /usr/share/;
+               }
+        }
+
+        error_log /var/log/nginx/error-pma.log debug;
+        access_log /var/log/nginx/access-pma.log;
+}
+

@@ -2,7 +2,7 @@ FROM centos:6.8
 
 MAINTAINER Voicu Tibea <voicut31@yahoo.com>
 
-RUN yum install -y wget mc lynx git
+RUN yum install -y wget mc lynx git vim
 
 RUN yum install -y initscripts
 
