@@ -6,7 +6,7 @@ RUN yum install -y wget mc lynx git vim initscripts epel-release
 
 RUN rpm -Uvh https://mirror.webtatic.com/yum/el6/latest.rpm
 
-RUN yum install -y nginx php71w php71w-common php71w-opcache php71w-fpm
+RUN yum install -y nginx php71w php71w-cli php71w-common php71w-opcache php71w-fpm
 
 RUN rpm -Uvh http://dev.mysql.com/get/mysql57-community-release-el6-7.noarch.rpm
 
