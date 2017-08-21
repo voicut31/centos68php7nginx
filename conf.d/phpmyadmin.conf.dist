@@ -1,5 +1,5 @@
 server {
-        server_name phpmyadmin.asf.docker;
+        server_name phpmyadmin.docker;
         location /phpMyAdmin {
                root /usr/share/;
                index index.php index.html index.htm;
@@ -19,4 +19,3 @@ server {
         error_log /var/log/nginx/error-pma.log debug;
         access_log /var/log/nginx/access-pma.log;
 }
-

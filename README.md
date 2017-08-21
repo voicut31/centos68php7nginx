@@ -2,7 +2,7 @@ Docker with nGinx, Php 7, MySQL 5.7, Sphinx Search, Memcached, MongoDB
 
 ## Last Version
 nginx: **1.10.2**   
-php:   **7.0**
+php:   **7.1**
 mysql:   **5.7**
 memcached:   **1.4.4**
 sphinxsearch: **2.1.5**
@@ -10,7 +10,7 @@ mongodb:   **3.4**
 
 ## Docker Hub   
 **Nginx-PHP7:** [https://hub.docker.com/r/voicut31/centos68php7nginx/](https://hub.docker.com/r/voicut31/centos68php7nginx/)   
-   
+
 ## Installation
 Pull the image from the docker index rather than downloading the git repo. This prevents you having to build the image on every docker host.
 ```sh
@@ -46,4 +46,3 @@ voicut31/centos68php7nginx/
 Author: Voicu Tibea    
 Email:  voicut31@yahoo.com       
 Link:   https://www.voicutibea.ro
-
